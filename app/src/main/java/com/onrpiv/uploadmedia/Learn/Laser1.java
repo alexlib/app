@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Layout;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.onrpiv.uploadmedia.R;
@@ -22,6 +23,8 @@ public class Laser1 extends LaserSafetyLayout {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_laser1);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         TextView t0 = (TextView)findViewById(R.id.laserSafety1TextView0);
         t0.setText("Laser Definition");
         t0.setTextSize(headerTextSize);
@@ -34,5 +37,17 @@ public class Laser1 extends LaserSafetyLayout {
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+    }
+
+    // put here to make the arrow at the top left navigate back to previous class.
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
