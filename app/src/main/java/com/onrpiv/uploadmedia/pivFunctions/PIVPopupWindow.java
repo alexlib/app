@@ -28,14 +28,14 @@ public class PIVPopupWindow extends AppCompatActivity {
     private final Object toClass;
 
     // popup window class are variable declaration
-    PIVPopupWindow(Context myContext, RelativeLayout myRelativeLayout, Button myPopupWindowButton, String myWindowMessage, String myPopupWindowTitle, final Object thisMyClass, final Object thistoClass) {
+    public PIVPopupWindow(Context myContext, RelativeLayout myRelativeLayout, Button myPopupWindowButton, String myWindowMessage, String myPopupWindowTitle, final Object thisMyClass, final Object thisToClass) {
         context = myContext;
         relativeLayout = myRelativeLayout;
         popupWindowButton = myPopupWindowButton;
         popupWindowTitle = myPopupWindowTitle;
         popupWindowMessage = myWindowMessage;
         myClass = thisMyClass; // class we want to start from
-        toClass = thistoClass; // class we want to navigate to
+        toClass = thisToClass; // class we want to navigate to
     }
 
 //    public void createPopupWindow() {
@@ -68,7 +68,7 @@ public class PIVPopupWindow extends AppCompatActivity {
 //                    public void onClick(View v) {
 //                        // Right here is the problem. We want to start in myClass.this (aka
 //                        // HomeActivity.this), but how?
-//                        startActivity(new Intent(myClass.this, toClass.getClass()));
+//                        startActivity(new Intent(context, toClass.getClass()));
 //                    }
 //                });
 //
