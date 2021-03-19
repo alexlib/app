@@ -7,11 +7,13 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/> <!-- IMEI-->
     <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
         tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.QUERIES"/>
 
     <uses-feature android:name="android.hardware.camera" android:required="false"/>
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
@@ -42,6 +44,7 @@
         <activity android:name=".Learn.PIVBasics2"/>
         <activity android:name=".Learn.PIVBasics3"/>
         <activity android:name=".Learn.PIVBasics4"/>
+        <activity android:name=".Learn.PIVBasics5"/>
         <activity android:name=".Learn.Imaging1"/>
         <activity android:name=".Learn.Imaging2"/>
         <activity android:name=".Learn.Imaging3"/>
@@ -68,6 +71,7 @@
         <activity android:name=".Learn.Pos12_Activity"/>
         <activity android:name=".Learn.Pos13_Activity"/>
         <activity android:name=".Learn.Pos14_Activity"/>
+        <activity android:name=".Learn.Pos15_Activity"/>
         <activity android:name=".Learn.TryExperiments"/>
         <activity android:name=".Learn.LearnFluids"/>
         <activity android:name=".Learn.LearnPIV"/>
@@ -78,7 +82,7 @@
         <activity android:name=".Experiment.ViewPagerActivity"/>
         <activity android:name=".Experiment.MainActivity"/>
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
