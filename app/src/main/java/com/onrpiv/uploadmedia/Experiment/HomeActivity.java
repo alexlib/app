@@ -116,8 +116,8 @@ public class HomeActivity extends AppCompatActivity {
         // GOAL: to create the class that's commented out below and have it's function called instead
         // of having the executePopupWindow() function in EVERY class that needs a popup window.
 
-//        PIVPopupWindow piv = new PIVPopupWindow(context, relativeLayout, popupWindowButton1, windowMessage1, windowMessageTitle1, homeActivity, learnPIV);
-//        piv.createPopupWindow();
+        //PIVPopupWindow piv = new PIVPopupWindow(context, relativeLayout, popupWindowButton1, windowMessage1, windowMessageTitle1, homeActivity, learnPIV);
+        //piv.createPopupWindow();
     }
 
     private void executePopupWindow(Button button, final String popUpWindowTitle, final String popupWindowMessage, final Object myClass) {

@@ -38,50 +38,50 @@ public class PIVPopupWindow extends AppCompatActivity {
         toClass = thisToClass; // class we want to navigate to
     }
 
-//    public void createPopupWindow() {
-//
-//        popupWindowButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
-//
-//                final View customView = inflater.inflate(R.layout.popup_window_info, null);
-//
-//                TextView windowTitle = (TextView) customView.findViewById(R.id.popupWindowTitle);
-//                windowTitle.setText(popupWindowTitle);
-//
-//                TextView windowMessage = (TextView) customView.findViewById(R.id.popupWindowMessage);
-//                windowMessage.setText(popupWindowMessage);
-//
-//                // New instance of popup window
-//                popupWindow = new PopupWindow(customView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//
-//                // Setting an elevation value for popup window, it requires API level 21
-//                if (Build.VERSION.SDK_INT >= 21) {
-//                    popupWindow.setElevation(5.0f);
-//                }
-//
-//                Button navigateButton = (Button) customView.findViewById(R.id.button_navigate);
-//                navigateButton.setText("Learn more?");
-//                navigateButton.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        // Right here is the problem. We want to start in myClass.this (aka
-//                        // HomeActivity.this), but how?
-//                        startActivity(new Intent(context, toClass.getClass()));
-//                    }
-//                });
-//
-//                Button closeButton = (Button) customView.findViewById(R.id.button_close);
-//                closeButton.setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        popupWindow.dismiss();
-//                    }
-//                });
-//
-//                popupWindow.showAtLocation(relativeLayout, Gravity.CENTER, 0, 0);
-//            }
-//        });
-//    }
+    public void createPopupWindow() {
+
+        popupWindowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
+
+                final View customView = inflater.inflate(R.layout.popup_window_info, null);
+
+                TextView windowTitle = (TextView) customView.findViewById(R.id.popupWindowTitle);
+                windowTitle.setText(popupWindowTitle);
+
+                TextView windowMessage = (TextView) customView.findViewById(R.id.popupWindowMessage);
+                windowMessage.setText(popupWindowMessage);
+
+                // New instance of popup window
+                popupWindow = new PopupWindow(customView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+
+                // Setting an elevation value for popup window, it requires API level 21
+                if (Build.VERSION.SDK_INT >= 21) {
+                    popupWindow.setElevation(5.0f);
+                }
+
+                Button navigateButton = (Button) customView.findViewById(R.id.button_navigate);
+                navigateButton.setText("Learn more?");
+                navigateButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Right here is the problem. We want to start in myClass.this (aka
+                        // HomeActivity.this), but how?
+                        startActivity(new Intent(context, toClass.getClass()));
+                    }
+                });
+
+                Button closeButton = (Button) customView.findViewById(R.id.button_close);
+                closeButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        popupWindow.dismiss();
+                    }
+                });
+
+                popupWindow.showAtLocation(relativeLayout, Gravity.CENTER, 0, 0);
+            }
+        });
+    }
 }
